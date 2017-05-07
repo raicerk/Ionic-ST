@@ -6,12 +6,25 @@
 
 <ion-content padding>
   <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+Variable desde controlador:
+{{bebe}}
+<hr>
+Nombre: <input [(ngModel)]="nombre"><br>
+Usuario: <input [(ngModel)]="usuario"><br>
+Ubicacion: <input [(ngModel)]="ubicacion"><br>
+
+<button (tap)="storeMyOfflineData()" class="btn btn-default">Guardar</button>
+
+<hr>
+
+Variable desde el controlador : {{pareja}}
+
+<hr>
+
+<button (tap)="getMyOfflineData()">Mostrar</button>
+
+<ul *ngFor="let valor of DataArray">
+  <li>{{valor.name}}</li>
+</ul>
 </ion-content>
