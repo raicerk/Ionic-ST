@@ -16,6 +16,16 @@ import { DatabaseService } from '../providers/DatabaseService';
 
 import { SQLite } from '@ionic-native/sqlite';
 
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  LatLng,
+  CameraPosition,
+  MarkerOptions,
+  Marker
+} from '@ionic-native/google-maps';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -43,6 +53,7 @@ import { SQLite } from '@ionic-native/sqlite';
     SplashScreen,
     SQLite,
     DatabaseService,
+    GoogleMaps,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
