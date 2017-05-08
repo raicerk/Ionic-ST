@@ -16,14 +16,16 @@ import { DatabaseService } from '../providers/DatabaseService';
 
 import { SQLite } from '@ionic-native/sqlite';
 
+import { Camera, CameraOptions } from '@ionic-native/camera';
+
 import {
-  GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent,
-  LatLng,
-  CameraPosition,
-  MarkerOptions,
-  Marker
+ GoogleMaps,
+ GoogleMap,
+ GoogleMapsEvent,
+ LatLng,
+ CameraPosition,
+ MarkerOptions,
+ Marker
 } from '@ionic-native/google-maps';
 
 @NgModule({
@@ -54,6 +56,7 @@ import {
     SQLite,
     DatabaseService,
     GoogleMaps,
+    Camera,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
