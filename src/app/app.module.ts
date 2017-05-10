@@ -7,6 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { Consultas } from '../pages/consultas/consultas';
+import { Sincronizar } from '../pages/sincronizar/sincronizar';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -17,6 +18,8 @@ import { DatabaseService } from '../providers/DatabaseService';
 import { SQLite } from '@ionic-native/sqlite';
 
 import { Camera, CameraOptions } from '@ionic-native/camera';
+
+import { Geolocation } from '@ionic-native/geolocation';
 
 import {
  GoogleMaps,
@@ -35,7 +38,8 @@ import {
     ContactPage,
     HomePage,
     TabsPage,
-    Consultas
+    Consultas,
+    Sincronizar
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,8 @@ import {
     ContactPage,
     HomePage,
     TabsPage,
-    Consultas
+    Consultas,
+    Sincronizar
   ],
   providers: [
     StatusBar,
@@ -57,6 +62,7 @@ import {
     DatabaseService,
     GoogleMaps,
     Camera,
+    Geolocation,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
