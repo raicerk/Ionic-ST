@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
 import {
   GoogleMaps,
   GoogleMap,
@@ -9,6 +10,7 @@ import {
   MarkerOptions,
   Marker
 } from '@ionic-native/google-maps';
+
 
 
 @Component({
@@ -21,10 +23,11 @@ export class AboutPage {
 
   }
 
+
+  // Load map only after view is initialized
   ngAfterViewInit() {
     this.loadMap();
   }
-
   loadMap() {
     // make sure to create following structure in your view.html file
     // and add a height (for example 100%) to it, else the map won't be visible
@@ -39,7 +42,12 @@ export class AboutPage {
 
     // listen to MAP_READY event
     // You must wait for this event to fire before adding something to the map or modifying it in anyway
-    map.one(GoogleMapsEvent.MAP_READY).then(() => console.log('Map is ready!'));
+    map.one(GoogleMapsEvent.MAP_READY).then(
+      () => {
+        console.log('Map is ready!');
+        // Now you can add elements to the map like the marker
+      }
+    );
 
     // create LatLng object
     let ionic: LatLng = new LatLng(43.0741904, -89.3809802);
@@ -60,10 +68,9 @@ export class AboutPage {
       title: 'Ionic'
     };
 
-    map.addMarker(markerOptions)
-      .then((marker) => {
+    const marker: any = map.addMarker(markerOptions)
+      .then((marker: any) => {
         marker.showInfoWindow();
       });
   }
-
 }

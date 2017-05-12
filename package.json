@@ -19,27 +19,28 @@
         "@angular/http": "4.0.0",
         "@angular/platform-browser": "4.0.0",
         "@angular/platform-browser-dynamic": "4.0.0",
-        "@ionic-native/camera": "^3.6.1",
-        "@ionic-native/core": "^3.6.1",
+        "@ionic-native/camera": "^3.7.0",
+        "@ionic-native/core": "^3.7.0",
         "@ionic-native/geolocation": "^3.7.0",
-        "@ionic-native/google-maps": "^3.6.1",
+        "@ionic-native/google-maps": "^3.7.0",
         "@ionic-native/splash-screen": "3.4.2",
-        "@ionic-native/sqlite": "^3.5.0",
+        "@ionic-native/sqlite": "^3.7.0",
         "@ionic-native/status-bar": "3.4.2",
+        "@ionic/app-scripts": "^1.3.7",
         "@ionic/storage": "2.0.1",
         "cordova-android": "^6.2.3",
         "cordova-plugin-camera": "^2.4.1",
         "cordova-plugin-compat": "^1.1.0",
-        "cordova-plugin-console": "1.0.5",
-        "cordova-plugin-device": "1.1.4",
+        "cordova-plugin-console": "^1.0.5",
+        "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-geolocation": "^2.4.3",
-        "cordova-plugin-googlemaps": "^1.4.0",
-        "cordova-plugin-splashscreen": "~4.0.1",
-        "cordova-plugin-statusbar": "2.2.1",
-        "cordova-plugin-whitelist": "1.3.1",
+        "cordova-plugin-googlemaps": "file:node_modules/cordova-plugin-googlemaps",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-statusbar": "^2.2.1",
+        "cordova-plugin-whitelist": "^1.3.1",
         "cordova-sqlite-storage": "^2.0.4",
         "ionic-angular": "3.0.1",
-        "ionic-plugin-keyboard": "~2.2.1",
+        "ionic-plugin-keyboard": "^2.2.1",
         "ionicons": "3.0.0",
         "rxjs": "5.1.1",
         "sw-toolbox": "3.4.0",
@@ -47,6 +48,8 @@
     },
     "devDependencies": {
         "@ionic/app-scripts": "1.3.0",
+        "@ionic/cli-plugin-cordova": "1.0.0",
+        "@ionic/cli-plugin-ionic-angular": "1.0.0",
         "typescript": "~2.2.1"
     },
     "cordovaPlugins": [
@@ -68,11 +71,11 @@
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
             "cordova-sqlite-storage": {},
+            "cordova-plugin-camera": {},
+            "cordova-plugin-geolocation": {},
             "cordova-plugin-googlemaps": {
                 "API_KEY_FOR_ANDROID": "AIzaSyDrRG7knpffakOr5inupB6q3FgBR6DwiRc"
-            },
-            "cordova-plugin-camera": {},
-            "cordova-plugin-geolocation": {}
+            }
         },
         "platforms": [
             "android"

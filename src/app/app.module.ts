@@ -16,20 +16,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { DatabaseService } from '../providers/DatabaseService';
 
 import { SQLite } from '@ionic-native/sqlite';
-
 import { Camera, CameraOptions } from '@ionic-native/camera';
-
 import { Geolocation } from '@ionic-native/geolocation';
-
 import {
- GoogleMaps,
- GoogleMap,
- GoogleMapsEvent,
- LatLng,
- CameraPosition,
- MarkerOptions,
- Marker
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  LatLng,
+  CameraPosition,
+  MarkerOptions,
+  Marker
 } from '@ionic-native/google-maps';
+
 
 @NgModule({
   declarations: [
@@ -60,9 +58,9 @@ import {
     SplashScreen,
     SQLite,
     DatabaseService,
-    GoogleMaps,
     Camera,
     Geolocation,
+    GoogleMaps,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
